@@ -7,11 +7,12 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
+        $serverIp = $request->server('SERVER_ADDR');
         $posts = Post::orderBy('id', 'desc')->get();
 
-        return view('index', compact('posts'));
+        return view('index', compact('posts', 'serverIp'));
     }
 
     public function store(Request $request)

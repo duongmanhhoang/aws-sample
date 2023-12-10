@@ -15,6 +15,7 @@
 
 <body>
     <div class="p-5">
+        <h1>IP: {{ $serverIp }}</h1>
         <form method="post" action="">
             @csrf
             <div class="mb-3">
