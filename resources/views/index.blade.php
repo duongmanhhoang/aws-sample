@@ -28,14 +28,20 @@
         <div class="mt-5">
             <h1>List</h1>
             <div class="row">
-                <ul>
-                    @foreach($posts as $post)
-                        <li>{{ $post->title}}</li>
+                @foreach ($posts as $post)
+                    <div class="col-3">
+                        <div>
+                            <img style="object-fit: cover; width: 100%; height: 300px"
+                                src="https://d2dxxrqpe5sd97.cloudfront.net/cat_{{ rand(1, 3) }}.jpeg" />
+                        </div>
+                        <div>
+                            {{ $post->title }}
+                        </div>
+                    </div>
                     @endforeach
-                </ul>
-
             </div>
         </div>
+    </div>
     </div>
 
 
